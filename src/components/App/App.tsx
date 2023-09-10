@@ -1,6 +1,7 @@
 
-import AirplaneIcon from '../airplane-icon/airplane-icon'
-import './styles/App.css'
+import AirplaneIcon from '../airplane-icon/airplane-icon';
+import Flights from './flights/flights';
+import './styles/App.css';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <h1>Avia test</h1>
       <AirplaneIcon />
+      <Flights />
     </>
   )
 }

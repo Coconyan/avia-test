@@ -1,0 +1,85 @@
+.flight-list-item {
+  display: flex;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 7px 0px rgb(198, 198, 198);
+
+  &__company {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-right: 20px;
+
+    button {
+      font-size: 20px;
+      border: none;
+      max-width: 150px;
+      padding: 7px 20px;
+      border-radius: 8px;
+      background-color: rgb(255, 128, 0);
+      color: #fff;
+      transition: background-color 150ms ease-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(207, 105, 3);
+      }
+
+      &:active {
+        background-color: rgb(165, 84, 3);
+      }
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+  }
+
+  &__info {
+    text-align: left;
+
+    &--to {
+      text-align: right;
+    }
+  }
+
+  &__info-time {
+    font-size: 40px;
+  }
+
+  &__info-airport {
+    font-weight: bold;
+  }
+
+  &__info-date {
+    color: gray;
+  }
+
+  &__connections {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      transform: rotate(45deg);
+
+      path {
+        fill: rgb(198, 198, 198) !important;
+      }
+    }
+  }
+
+  &__connections-plane {
+    display: flex;
+
+    div {
+      width: 100%;
+      height: 50%;
+      border-bottom: 1px solid rgb(198, 198, 198);
+    }
+  }
+}

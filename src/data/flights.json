@@ -1,0 +1,66 @@
+[
+  {
+    "id": "11",
+    "company": "Turkish Airlines",
+    "departure": {
+      "shortname": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival": {
+      "shortname": "TLV",
+      "name": "Тель-Авив"
+    },
+    "unixDateTimeFrom": 1536457082,
+    "unixDateTimeTo": 1536550682,
+    "connectionsCount": 1,
+    "price": 21032
+  },
+  {
+    "id": "22",
+    "company": "Turkish Airlines",
+    "departure": {
+      "shortname": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival": {
+      "shortname": "TLV",
+      "name": "Тель-Авив"
+    },
+    "unixDateTimeFrom": 1536459602,
+    "unixDateTimeTo": 1536553322,
+    "connectionsCount": 2,
+    "price": 22151
+  },
+  {
+    "id": "33",
+    "company": "Turkish Airlines",
+    "departure": {
+      "shortname": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival": {
+      "shortname": "TLV",
+      "name": "Тель-Авив"
+    },
+    "unixDateTimeFrom": 1536457082,
+    "unixDateTimeTo": 1536565442,
+    "connectionsCount": 3,
+    "price": 21077
+  },
+  {
+    "id": "44",
+    "company": "Turkish Airlines",
+    "departure": {
+      "shortname": "VVO",
+      "name": "Владивосток"
+    },
+    "arrival": {
+      "shortname": "TLV",
+      "name": "Тель-Авив"
+    },
+    "unixDateTimeFrom": 1536457082,
+    "unixDateTimeTo": 1536557882,
+    "connectionsCount": 1,
+    "price": 24555
+  }
+]
