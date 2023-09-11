@@ -20,7 +20,14 @@
       margin-bottom: 20px;
     }
 
+    &:hover {
+      span {
+        visibility: visible;
+      }
+    }
+
     span {
+      visibility: hidden;
       cursor: pointer;
       margin-left: auto;
       color: rgb(116, 174, 245);
@@ -66,6 +73,7 @@
 
     &.active {
       background-color: rgb(116, 174, 245);
+      color: #fff;
     }
   }
 }
