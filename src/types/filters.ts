@@ -1,7 +1,7 @@
 export enum Filters {
   All = "All",
-  WithoutConnections = "WithoutConnections",
-  OneConnection = "OneConnection",
-  TwoConnection = "TwoConnection",
-  ThreeConnection = "ThreeConnection",
+  WithoutConnections = 0,
+  OneConnection = 1,
+  TwoConnection = 2,
+  ThreeConnection = 3,
 };

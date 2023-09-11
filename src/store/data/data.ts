@@ -8,15 +8,15 @@ import { getFilteredFlights } from '../../utils/get-filtered-flights';
 const initialState: Data = {
   flights: flights,
   filteredFlights: flights,
-  currentFilter: Filters.All
+  currentFilters: [Filters.All]
 };
 
 export const data = createSlice({
   name: NameSpace.data,
   initialState,
   reducers: {
-    changeFilter: (state, action: { payload: Filters }) => {
-      state.currentFilter = action.payload;
+    changeFilter: (state, action: { payload: Filters[] }) => {
+      state.currentFilters = action.payload;
       state.filteredFlights = getFilteredFlights(action.payload, state.flights);
     },
   },

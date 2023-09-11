@@ -1,6 +1,6 @@
 
 import AirplaneIcon from '../airplane-icon/airplane-icon';
-import Flights from './flights/flights';
+import Flights from '../flights/flights';
 import './styles/App.css';
 
 function App() {

@@ -1,0 +1,39 @@
+.flights-filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 7px 0px rgb(198, 198, 198);
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  &__filter-wrapper {
+    display: flex;
+
+    span {
+      cursor: pointer;
+      margin-left: auto;
+      color: rgb(116, 174, 245);
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    user-select: none;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+}

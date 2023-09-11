@@ -5,4 +5,4 @@ import { State } from '../../types/state';
 
 export const getFlights = (state: State): Flights => state[NameSpace.data].flights;
 export const getFilteredFlights = (state: State): Flights => state[NameSpace.data].filteredFlights;
-export const getCurrentFilter = (state: State): Filters => state[NameSpace.data].currentFilter;
+export const getCurrentFilters = (state: State): Filters[] => state[NameSpace.data].currentFilters;
