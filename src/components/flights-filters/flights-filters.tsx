@@ -2,10 +2,18 @@ import {
   useEffect,
   useState
 } from 'react';
-import { useAppDispatch } from '../../hooks';
+import {
+  useAppDispatch,
+  useAppSelector
+} from '../../hooks';
 import './styles/flights-filters.scss';
-import { changeFilter } from '../../store/data/data';
+import {
+  changeCurrency,
+  changeFilter
+} from '../../store/data/data';
 import { Filters } from '../../types/filters';
+import { Currencies } from '../../const';
+import { getCurrency } from '../../store/data/selectors';
 
 function FlightsFilters() {
   const [filterAll, setFilterAll] = useState(true);
@@ -13,7 +21,12 @@ function FlightsFilters() {
   const [filterOne, setFilterOne] = useState(false);
   const [filterTwo, setFilterTwo] = useState(false);
   const [filterThree, setFilterThree] = useState(false);
+  const currency = useAppSelector(getCurrency);
   const dispatch = useAppDispatch();
+
+  const handleChangeCurrency = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(changeCurrency(e.target.value as Currencies))
+  }
 
   const handleSetFilters = () => {
     const filters = []
@@ -73,6 +86,52 @@ function FlightsFilters() {
 
   return (
     <div className="flights-filters">
+      <h2>Валюта</h2>
+      <div className="flights-filters__filter-wrapper">
+        <input
+          type="radio"
+          name="radio"
+          id={Currencies.Rub}
+          value={Currencies.Rub}
+          checked={currency == Currencies.Rub ? true : false}
+          onChange={handleChangeCurrency}
+        />
+        <label
+          htmlFor={Currencies.Rub}
+          className={`radio-label ${currency == Currencies.Rub ? 'active' : ''}`}
+        >
+          {Currencies.Rub}
+        </label>
+        <input
+          type="radio"
+          name="radio"
+          id={Currencies.Usd}
+          value={Currencies.Usd}
+          checked={currency == Currencies.Usd ? true : false}
+          onChange={handleChangeCurrency}
+        />
+        <label
+          className={`radio-label ${currency == Currencies.Usd ? 'active' : ''}`}
+          htmlFor={Currencies.Usd}
+        >
+          {Currencies.Usd}
+        </label>
+        <input
+          type="radio"
+          name="radio"
+          id={Currencies.Eur}
+          value={Currencies.Eur}
+          checked={currency == Currencies.Eur ? true : false}
+          onChange={handleChangeCurrency}
+        />
+        <label
+          className={`radio-label ${currency == Currencies.Eur ? 'active' : ''}`}
+          htmlFor={Currencies.Eur}
+        >
+          {Currencies.Eur}
+        </label>
+      </div>
+
       <h2>Количество пересадок</h2>
       <label htmlFor="all">
         <input

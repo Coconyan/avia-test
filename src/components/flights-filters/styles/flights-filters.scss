@@ -16,6 +16,10 @@
   &__filter-wrapper {
     display: flex;
 
+    &:first-child {
+      margin-bottom: 20px;
+    }
+
     span {
       cursor: pointer;
       margin-left: auto;
@@ -34,6 +38,34 @@
       width: 20px;
       height: 20px;
       margin-right: 10px;
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .radio-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: background-color 150ms ease-out;
+
+    &:hover {
+      background-color: rgb(182, 211, 247);
+    }
+
+    &:active {
+      background-color: rgb(64, 148, 252);
+      color: #fff;
+    }
+
+    &.active {
+      background-color: rgb(116, 174, 245);
     }
   }
 }

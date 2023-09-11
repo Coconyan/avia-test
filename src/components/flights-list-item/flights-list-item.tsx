@@ -4,6 +4,9 @@ import './styles/flights-list-item.scss';
 import { getDayOfTheWeek } from '../../utils/get-days-of-the-week';
 import { ReactComponent as PlaneIcon } from '../../assets/plane.svg';
 import updateLocale from 'dayjs/plugin/updateLocale';
+import { useAppSelector } from '../../hooks';
+import { getCurrency } from '../../store/data/selectors';
+import { getPriceWithCurrency } from '../../utils/get-price-with-currency';
 
 dayjs.extend(updateLocale);
 
@@ -24,12 +27,14 @@ function FlightsListItem(props: PropsType) {
   const dateTo = `${dayjs.unix(flight.unixDateTimeTo).format("DD MMM YYYY")}, ${getDayOfTheWeek(dayjs.unix(flight.unixDateTimeTo).day())}`;
   const timeFrom = dayjs.unix(flight.unixDateTimeFrom).format("HH:MM");
   const timeTo = dayjs.unix(flight.unixDateTimeTo).format("HH:MM");
+  const currency = useAppSelector(getCurrency);
+
 
   return (
     <div className="flight-list-item">
       <div className="flight-list-item__company">
         {flight.company}
-        <button>Купить за {flight.price} ₽</button>
+        <button>Купить за {getPriceWithCurrency(currency, flight.price)} {currency}</button>
       </div>
       <div className="flight-list-item__info-wrapper">
         <div className="flight-list-item__info">
